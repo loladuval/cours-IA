@@ -4,7 +4,7 @@
 <div class="col-left">
 
 # État de l'art 
-2022 Jason Allen a remporté la première place de la foire annuelle de l'État du Colorado, grâce à une image générée par intelligence artificielle.
+2022 - Jason Allen a remporté la première place de la foire annuelle de l'État du Colorado, grâce à une image générée par intelligence artificielle.
 
 </div>
 
