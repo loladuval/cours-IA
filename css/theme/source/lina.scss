@@ -1,0 +1,288 @@
+/**
+ * A simple theme for reveal.js presentations, similar
+ * to the default theme. The accent color is darkblue.
+ *
+ * This theme is Copyright (C) 2012 Owen Versteeg, https://github.com/StereotypicalApps. It is MIT licensed.
+ * reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@use "sass:color";
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+@import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+
+
+// Override theme settings (see ../template/settings.scss)
+$mainFont: 'Lato', sans-serif;
+$mainColor: #a2a2a2;
+$mainFontSize: 30px;
+$headingFont: 'News Cycle', Impact, sans-serif;
+$headingColor: white;
+$headingTextShadow: none;
+$headingTextTransform: none;
+$backgroundColor: #000;
+$linkColor: rgb(237 100 166);
+$linkColorHover: color.scale($linkColor, $lightness: 20%);
+$selectionBackgroundColor: rgba(0, 0, 0, 0.99);
+
+$overlayElementBgColor: 0, 0, 0;
+$overlayElementFgColor: 240, 240, 240;
+
+$heading1Size: 1.3em;
+
+$textAlign: left;
+
+// Change text colors against dark slide backgrounds
+@include dark-bg-text-color(#fff);
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+
+.reveal .slides {
+    text-align: left;
+    width: 100% !important;
+    height: 100% !important;
+    letter-spacing: 0.02em;
+
+    >section {
+        &:first-child {
+            text-align: center;
+
+            .box {
+                display: inline-block;
+                background-color: black;
+                padding: 1em 3em;
+                border: 1px solid white;
+            }
+
+        }
+    }
+
+    section {
+        width: 90%;
+        margin: 2em 5%;
+
+        // Slide subheading (grey text, smaller font)
+        &>p:first-child {
+            margin: 0 0 0.9em;
+            font-size: 0.8em;
+            line-height: 1em;
+            text-transform: uppercase;
+            color: var(--faded-heading-color);
+        }
+
+        // Slide subtitle
+        &>h1 {
+            font-size: 1.8em;
+            letter-spacing: 0.05em;
+            font-weight: bold;
+            margin-bottom: 35px;
+
+            &:after {
+                display: block;
+                content: ' ';
+                margin-top: 10px;
+                width: 100px;
+                height: 10px;
+                background: var(--heading-block-color);
+            }
+        }
+
+        &.vcenter {
+            top: 30% !important;
+            transform: translateY(-30%);
+
+            h1 {
+                text-align: center;
+                font-size: 2em;
+                border: none;
+            }
+        }
+
+        ul {
+            margin-left: 10px;
+
+            li {
+                list-style-type: none;
+                margin-bottom: 0.5em;
+
+                &::before {
+                    display: inline-block;
+                    position: relative;
+                    vertical-align: top;
+                    margin-right: 0.5em;
+                    content: '•';
+                    // line-height: 1em;
+                    color: var(--bullet-color);
+                }
+            }
+
+        }
+
+        dl {
+            dt {
+                color: white;
+                font-weight: bold;
+            }
+
+            dd {
+                margin-bottom: 0.8em;
+            }
+        }
+
+
+        .col-2 {
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .cols-53 {
+            display: grid;
+            grid-template-columns: 5fr 3fr;
+            gap: 2rem;
+            align-items: start;
+
+            figure {
+                margin-left: 20px;
+
+                p {
+                    margin: 0;
+                }
+
+                img {
+                    margin: 0;
+                }
+
+                &.portrait {
+
+                    img {
+                        width: 70%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+
+        .slide-footer {
+            position: absolute;
+            font-size: var(--xxs-font-size);
+            color: var(--faded-heading-color);
+            left: 1em;
+            bottom: 1em;
+        }
+
+        blockquote {
+            margin: inherit;
+            padding: 10px 40px;
+            background-color: rgb(48 48 48);
+
+        }
+
+        figure {
+            margin: 0;
+
+            figcaption {
+                font-size: 0.5em;
+            }
+        }
+
+        &.chapter {
+            width: 100%;
+            margin: 0;
+            height: 100%;
+
+            .col-2 {
+                height: 100%;
+            }
+
+            h1 {
+                font-size: 3em;
+            }
+
+            .col-left {
+                margin: 70% 10% 0 10%;
+
+                h2 {
+                    font-size: 1.3em;
+                    color: var(--faded-heading-color);
+                }
+            }
+
+            .col-right {
+                height: 100%;
+
+                figure {
+                    height: 100%;
+
+                    p {
+                        margin: 0;
+                        height: 100%;
+
+                        img {
+                            max-height: 100%;
+                            margin: 0;
+                            height: 100%;
+                            object-fit: cover;
+                            width: 100%;
+                            max-width: 100%;
+                        }
+                    }
+
+                }
+            }
+        }
+
+    }
+}
+
+section {
+
+
+    &.midjourney {
+        h1 {
+            img {
+                width: 75px;
+                padding: 0;
+                margin: 0 0 0 10px;
+            }
+        }
+    }
+
+    .logo {
+        margin: 0 0 -5px 10px;
+        display: inline-block;
+        width: 75px;
+        height: 75px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        path {
+            fill: white;
+        }
+
+        &.chatgpt-logo {
+            background-image: url('./images/OpenAI_logo_2025_(symbol).svg');
+
+        }
+
+        &.midjourney-logo {
+            background-image: url('./images/Midjourney_logo.svg');
+        }
+    }
+
+
+}

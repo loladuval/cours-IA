@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>ABC AI Design Graphique</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/lina.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section class="vcenter" data-background-image="./slides/images/dall-e.webp" data-background-size="cover"
+				data-background-position="center" data-background-opacity="0.7">
+				<div class="box">
+					<h1>Graphisme + IA</h1>
+
+			</section>
+			<section data-markdown="slides/100-intro.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n">
+			</section>
+			<section data-markdown="slides/110-histoire-ia.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n">
+			</section>
+			<section data-markdown="slides/120-robot.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n">
+			</section>
+			<section data-markdown="slides/130-histoire-ia-graphisme.md" data-separator="^\n\n\n"
+				data-separator-vertical="^\n\n"></section>
+			<section data-markdown="slides/140-definitions-1.md">
+			</section>
+			<section data-markdown="slides/150-definitions-2.md">
+			</section>
+			<section data-markdown>
+				# Définitions
+
+				* Prompt
+				* Modèles de langage
+				* GPT
+				* Data sets
+				* Agents
+				* Watermark
+				* Open source
+			</section>
+			<section data-class="chapter" data-markdown="./slides/200-etat-art.md" data-separator="^\n\n\n"
+				data-separator-vertical="^\n\n">
+			</section>
+			<section data-markdown="./slides/criteres.md">
+			</section>
+
+			<section data-markdown="./slides/chatgpt.md">
+			</section>
+
+			<section data-markdown="">
+				# Nano Banana - Google
+
+				* https://gemini.google/overview/image-generation/
+				* Available through Google Gemini as well as other apps and tools
+				* Excellent at editing existing images
+				* Visible watermark added to all images
+				* SynthID Il vous suffit d'importer une image dans l'appli Gemini et de demander si elle a été générée
+				par l'IA de Google. Cette vérification est possible grâce à SynthID, notre technologie de filigrane
+				numérique. Elle est actuellement disponible pour les images, et bientôt pour les fichiers audio et les
+				vidéos.
+				* https://blog.google/innovation-and-ai/products/ai-image-verification-gemini-app
+			</section>
+
+			<section data-markdown="./slides/midjourney.md">
+			</section>
+
+		</div>
+	</div>
+
+	<!--
+	
+				<section data-markdown="">
+				# Plusieurs types d'outils
+
+				* Les chatbots permettant de générer des images via un ou plusieurs modèles
+				* Les studios graphiques intégrant un chatbot
+				* Les outils de workflow
+				* Les modèles de génération
+
+			</section>
+
+
+	-->
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+			center: false,
+			width: '100%',
+			height: '100%',
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
+</html>
